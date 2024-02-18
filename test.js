@@ -128,7 +128,11 @@ function createTable(rows, columns) {
     var headerRow = document.createElement("tr");
     for (var i = 0; i < columns; i++) {
         var th = document.createElement("th");
-        th.textContent = "Column " + (i + 1);
+        if(i == 0){
+            th.textContent = "Name of Ion";
+        }else if(i == 1){
+            th.textContent = "Ion";
+        }
         headerRow.appendChild(th);
     }
     thead.appendChild(headerRow);
