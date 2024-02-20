@@ -99,12 +99,12 @@ function createAnswerTable(rows, columns, incorrect, data) {
             }else if(j == 1){
                 cell.textContent = polyatomicIons[i];
             }else if(j == 2){
-                if(incorrect[i]){
+                if(incorrect[i] && enterName[i]){
                     cell.style.backgroundColor = "red";
                 }
                 cell.textContent = data[i + 1][0];
             }else if(j == 3){
-                if(incorrect[i]){
+                if(incorrect[i] && !enterName[i]){
                     cell.style.backgroundColor = "red";
                 }
                 cell.textContent = data[i + 1][1];
